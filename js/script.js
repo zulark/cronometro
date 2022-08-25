@@ -3,12 +3,12 @@ window.onload = function () {
     var seconds = 00;
     var ms = 00;
     var minutes = 00;
+    // var lapMs = document.getElementById("lap-ms");
+    // var lapSec = document.getElementById("lap-sec");
+    // var lapMin = document.getElementById("lap-min");
     var appendMs = document.getElementById("ms");
     var appendSeconds = document.getElementById("seconds");
     var appendMinutes = document.getElementById("minutes");
-    var lapMs = document.getElementById("lap-ms");
-    var lapSec = document.getElementById("lap-sec");
-    var lapMin = document.getElementById("lap-min");
     var buttonStart = document.getElementById("button-start");
     var buttonStop = document.getElementById("button-stop");
     var buttonReset = document.getElementById("button-reset");
@@ -20,7 +20,6 @@ window.onload = function () {
     }
 
     buttonStop.onclick = function () {
-
         clearInterval(Interval); //Interval
         // lapMin.innerHTML = "Last lap: " + minutes;
         // lapSec.innerHTML = ":" + seconds;

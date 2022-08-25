@@ -75,32 +75,35 @@ footer p {
   font-weight: bold;
 }
 
-@media(max-width:500px) {
+@media(max-width:800px) {
   body{ 
     overflow: hidden;
   }
+  .wrapper{ 
+    padding: 0 1rem;
+  }
   .timer{
-    margin: 20px;
-    font-size: 5.2rem;
+    margin: 0;
+    font-size: 4rem;
     font-weight: bold;
-    letter-spacing: .8rem;
+    letter-spacing: 0rem;
   }
   .control{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
   }
 
   .control button{ 
-    padding: 2rem;
-    margin-bottom: 2rem;
-    width: 150px;
+    padding: 1.5rem;
+    margin: 0 0 .8rem;
+    width: 50%;
   }
   .links{
     display: flex;
     justify-content: space-around;
-    width: 150px;
   }
   .links img{
     width: 45px;
