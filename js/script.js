@@ -22,9 +22,9 @@ window.onload = function () {
     buttonStop.onclick = function () {
 
         clearInterval(Interval); //Interval
-        lapMin.innerHTML = "Last lap: " + minutes;
-        lapSec.innerHTML = ":" + seconds;
-        lapMs.innerHTML = ":" + ms;
+        // lapMin.innerHTML = "Last lap: " + minutes;
+        // lapSec.innerHTML = ":" + seconds;
+        // lapMs.innerHTML = ":" + ms;
     }
     buttonReset.onclick = function () {
         clearInterval(Interval);
