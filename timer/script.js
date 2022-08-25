@@ -1,9 +1,14 @@
 window.onload = function () {
 
     var seconds = 00;
-    var tens = 00;
-    var appendTens = document.getElementById("tens");
+    var ms = 00;
+    var minutes = 00;
+    var appendMs = document.getElementById("ms");
     var appendSeconds = document.getElementById("seconds");
+    var appendMinutes = document.getElementById("minutes");
+    var lapMs = document.getElementById("lap-ms");
+    var lapSec = document.getElementById("lap-sec");
+    var lapMin = document.getElementById("lap-min");
     var buttonStart = document.getElementById("button-start");
     var buttonStop = document.getElementById("button-stop");
     var buttonReset = document.getElementById("button-reset");
@@ -15,35 +20,48 @@ window.onload = function () {
     }
 
     buttonStop.onclick = function () {
+
         clearInterval(Interval); //Interval
+        lapMin.innerHTML = "Last lap: " + minutes;
+        lapSec.innerHTML = ":" + seconds;
+        lapMs.innerHTML = ":" + ms;
     }
     buttonReset.onclick = function () {
         clearInterval(Interval);
-        tens = "00";
+        ms = "00";
         seconds = "00";
-        appendTens.innerHTML = tens;
+        minutes = "00";
+        appendMs.innerHTML = ms;
         appendSeconds.innerHTML = seconds;
+        appendMinutes.innerHTML = minutes;
 
     }
 
     function startTimer() {
-        tens++;
+        ms++;
 
-        if (tens <= 9) {
-            appendTens.innerHTML = '0' + tens;
+        if (ms <= 9) {
+            appendMs.innerHTML = "0" + ms;
         }
-        if (tens > 9) {
-            appendTens.innerHTML = tens;
+        if (ms > 9) {
+            appendMs.innerHTML = ms;
         }
-        if (tens > 99) {
+        if (ms > 99) {
             seconds++;
             appendSeconds.innerHTML = "0" + seconds;
-            tens = 0;
-            appendTens.innerHTML = "0" + 0;
+            ms = 0;
+            appendMs.innerHTML = "0" + 0;
         }
 
         if (seconds > 9) {
-            appendSeconds.innerHTML = '0' + seconds;
+            appendSeconds.innerHTML = seconds;
+        }
+
+        if (seconds > 59) {
+            minutes++;
+            appendMinutes.innerHTML = "0" + minutes;
+            seconds = 0;
+            appendSeconds.innerHTML = "0" + 0;
         }
     }
 }

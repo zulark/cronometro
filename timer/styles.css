@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
-
+background-color: #f2e7dc;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+overflow: hidden;
 }
 
 .wrapper {
@@ -12,15 +19,94 @@ body {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  height: 100vh;
 }
 
 .timer {
   display: flex;
   justify-content: center;
+  margin: 50px;
+  font-size: 5rem;
+  font-weight: bold;
+  letter-spacing: 1rem;
 }
 
-.control {
+.control button{
+  text-transform: uppercase;
+  background: transparent;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 1.2rem;
+  font-size: 1rem;
+  padding: 0.60rem 2.5rem;
+  margin: 0 15px;
+}
+.control button { 
+  background-color: #903749;
+  transition: .2s ease;
+}
+.control button:hover{ 
+  background-color: #E84545;
+  color: #fff;
+ transform: translateY(-2.5px);
 }
 
 h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #0d0d0d;
+}
+.laps { 
+  display: flex;
+  justify-content: center;
+}
+footer{ 
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  text-align: center;
+}
+
+footer p { 
+  font-weight: bold;
+}
+
+@media(max-width:500px) {
+  body{ 
+    overflow: hidden;
+  }
+  .timer{
+    margin: 20px;
+    font-size: 5.2rem;
+    font-weight: bold;
+    letter-spacing: .8rem;
+  }
+  .control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .control button{ 
+    padding: 2rem;
+    margin-bottom: 2rem;
+    width: 150px;
+  }
+  .links{
+    display: flex;
+    justify-content: space-around;
+    width: 150px;
+  }
+  .links img{
+    width: 45px;
+  }
+
+  footer{ 
+    bottom: 0;
+  }
 }
