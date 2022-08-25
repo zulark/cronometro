@@ -83,7 +83,7 @@ footer p {
     padding: 0 1rem;
   }
   .timer{
-    margin: 0;
+    margin: 0 0 5rem 0;
     font-size: 4rem;
     font-weight: bold;
     letter-spacing: 0rem;
@@ -97,7 +97,7 @@ footer p {
   }
 
   .control button{ 
-    padding: 1.5rem;
+    padding: 1.2rem;
     margin: 0 0 .8rem;
     width: 50%;
   }
@@ -106,10 +106,12 @@ footer p {
     justify-content: space-around;
   }
   .links img{
-    width: 45px;
+    width: 30px;
   }
-
+  h1{ 
+    margin: 0 0 5rem 0;
+  }
   footer{ 
-    bottom: 0;
+    bottom: 5px;
   }
 }
