@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" href="img/icon.png">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,17 +18,18 @@
             <p><span id="seconds">00</span>:</p>
             <p><span id="ms">00</span></p>
         </div>
+        
+              <div class="laps" id="laps">
+                    <p id="lap-min"></p>
+                    <p id="lap-sec"></p>
+                    <p id="lap-ms"></p>
+                </div> 
         <div class="control">
             <button id="button-start">Iniciar</button>
             <button id="button-stop">Parar</button>
+            <button id="button-count-turns">Volta</button>
             <button id="button-reset">Resetar</button>
         </div>
-
-        <!-- <div class="laps">
-            <p id="lap-min"></p>
-            <p id="lap-sec"></p>
-            <p id="lap-ms"></p>
-        </div> -->
         
 
     </div>
@@ -44,6 +45,10 @@
 
 
     </footer>
+
+
+
+    <script src="js/script.js"></script>
 
 </body>
 
